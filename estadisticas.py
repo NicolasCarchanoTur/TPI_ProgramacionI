@@ -1,12 +1,16 @@
 from typing import List, Dict, Tuple
 import statistics
 
+#Función auxiliar: clave para comparar por población
+def clave_poblacion(pais: Dict) -> int:
+    return pais['poblacion']
+
 #Devuelve el país con mayor y menor población
 def pais_con_mayor_menor_poblacion(paises: List[Dict]) -> Tuple[Dict, Dict]:
     if not paises:  #Si la lista está vacía
         return None, None
-    mayor = max(paises, key=lambda p: p['poblacion'])  #País con más población
-    menor = min(paises, key=lambda p: p['poblacion'])  #País con menos población
+    mayor = max(paises, key=clave_poblacion)  #País con más población
+    menor = min(paises, key=clave_poblacion)  #País con menos población
     return mayor, menor
 
 #Calcula el promedio de población
