@@ -170,6 +170,7 @@ Australia;25687041;7692024;Oceanía
 | Integrante | Rol / Aporte |
 
 | **Nicolás Exequiel Carchano** | Desarrolló los archivos `main.py` y `acciones_menu.py`, integrando los distintos módulos del proyecto. También colaboró en la redacción y mejora de los comentarios del código. |
+
 | **Santino Cárdenas** | Creó las funciones principales de los módulos lógicos (ordenamientos, filtros, estadísticas y utilidades). Además, colaboró en la documentación y comentarios del código. |
 
 ---
