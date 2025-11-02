@@ -185,3 +185,5 @@ Australia;25687041;7692024;Oceanía
 - Calcular **estadísticas básicas** sobre conjuntos de información.
 
 ---
+
+## LINK GOOGLE DRIVE PARA VIDEO E INFORME: https://drive.google.com/drive/folders/1zFNjJZoEDEZl3dcgygd7_u04tF8QUGwn?usp=sharing
