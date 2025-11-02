@@ -52,6 +52,7 @@ Su propósito es facilitar el manejo de datos geográficos y demográficos media
 2. Filtrar países
 3. Ordenar países
 4. Ver estadísticas
+5. Mostrar todos los paises
 0. Salir
 ```
 
