@@ -58,17 +58,31 @@ def accion_filtrar(paises, mostrar_paises):
 
 #Opción 3: Ordenar países
 
+
 def accion_ordenar(paises, mostrar_paises):
-    #Permite ordenar los países por nombre, población o superficie
+    # Permite ordenar los países por nombre, población o superficie
     print('\nORDENAR')
     print('a. Por nombre')
     print('b. Por población')
     print('c. Por superficie')
     
     sub = input('Elija criterio (a/b/c): ').strip().lower()
-    sentido = input('Orden ascendente o descendente? (a/d): ').strip().lower()
-    desc = True if sentido == 'd' else False  # True = descendente
+    
+    #Validar criterio principal
+    if sub not in ('a', 'b', 'c'):
+        print('Opción inválida. Debe ser a, b o c.')
+        return  # sale de la función sin hacer nada más
 
+    #Validar sentido de ordenamiento (a/d)
+    while True:
+        sentido = input('Orden ascendente o descendente? (a/d): ').strip().lower()
+        if sentido in ('a', 'd'):
+            break
+        print('Opción inválida. Debe ingresar "a" o "d".')
+    
+    desc = (sentido == 'd')  #True si descendente, False si ascendente
+
+    #Lógica de ordenamiento según criterio
     match sub:
         case 'a':
             mostrar_paises(ordenar_por_nombre(paises, desc))
@@ -76,8 +90,7 @@ def accion_ordenar(paises, mostrar_paises):
             mostrar_paises(ordenar_por_poblacion(paises, desc))
         case 'c':
             mostrar_paises(ordenar_por_superficie(paises, desc))
-        case _:
-            print('Opción inválida.')
+
 
 #Opción 4: Estadísticas
 
